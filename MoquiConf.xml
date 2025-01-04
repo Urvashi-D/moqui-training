@@ -1,0 +1,13 @@
+    <entity-facade>
+        <entity>
+            <group name="MoquiTraining" package="org.moqui.training"/>
+        </entity>
+    </entity-facade>
+
+
+
+
+
+
+
+
