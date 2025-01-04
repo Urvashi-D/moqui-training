@@ -1,4 +1,5 @@
-    <entity-facade>
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-facade>
         <entity>
             <group name="MoquiTraining" package="org.moqui.training"/>
         </entity>

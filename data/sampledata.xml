@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-facade-xml type="demo">
+    <moqui.training.MoquiTraining trainingId='1' trainingName='viresh' trainingDate='2024-12-20' trainingPrice='2000' trainingDuration='12'/>
+</entity-facade-xml>
