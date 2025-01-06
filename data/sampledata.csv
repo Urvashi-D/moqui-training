@@ -1,0 +1,4 @@
+moqui.training.MoquiTraining,demo
+
+trainingId, trainingName, trainingDate, trainingPrice, trainingDuration
+3, urvashi, 2025-01-11, 16880, 12
