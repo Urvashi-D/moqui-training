@@ -1,7 +1,5 @@
 import org.moqui.context.ExecutionContext
 import org.moqui.entity.EntityValue
-
-// This script assumes it's running in the context of a Moqui service-call
 ExecutionContext ec = context.ec
 // Input parameters
 def trainingName = context.trainingName
@@ -23,7 +21,7 @@ def trainingId = ec.entity.sequencedIdPrimary("MoquiTraining", null, null)
 // Create the MoquiTraining entity record
 EntityValue trainingRecord = ec.entity.makeValue("MoquiTraining")
 
-trainingRecord.set("trainingId", trainingId) // Explicitly set trainingId
+trainingRecord.set("trainingId", trainingId) //it is  Explicitly setting trainingId
 trainingRecord.set("trainingName", trainingName)
 trainingRecord.set("trainingDate", trainingDate)
 

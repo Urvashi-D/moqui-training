@@ -10,6 +10,22 @@
 <!--            <auto-parameters include="pk" required="true"/>-->
 <!--        </out-parameters>-->
 <!--    </service>-->
+
+<!--        <service verb="create" noun="MoquiTraining">-->
+<!--            <in-parameters>-->
+<!--                <auto-parameters entity-name="moqui.training.MoquiTraining" include="nonpk"/>-->
+<!--                <parameter name="trainingName" required="true"/>-->
+<!--                <parameter name="trainingDate" required="true"/>-->
+<!--            </in-parameters>-->
+<!--            <out-parameters>-->
+<!--                <parameter name="trainingId"/>-->
+<!--            </out-parameters>-->
+<!--            <actions>-->
+<!--                <service-call name="create#moqui.training.MoquiTraining" in-map="context" out-map="context"/>-->
+<!--            </actions>-->
+<!--        </service>-->
+
+
     <service verb="create" noun="MoquiTraining" type="script"
              location="component://moqui-training/script/MoquiTrainingService.groovy">
         <in-parameters>
@@ -21,6 +37,7 @@
             <parameter name="trainingId"/>
         </out-parameters>
     </service>
+
 
     <service verb="fetch" noun="MoquiTraining">
         <in-parameters>
@@ -43,7 +60,6 @@
         </actions>
     </service>
 
-    //create and update
     <service verb="store" noun="MoquiTraining">
         <in-parameters>
             <parameter name="trainingId"/>
