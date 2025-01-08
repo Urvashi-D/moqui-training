@@ -17,6 +17,29 @@ name="party" displayName="Party REST API" version="2.0.0">
         </id>
       </resource>
 
+<!--  Contact Mech through Party-->
+
+    <resource name="partycon" require-authentication="anonymous-all">
+        <id name="partyId">
+            <resource name="contact">
+            <method type="get">
+                <entity name="ContactMechEntity" operation="one"/>
+            </method>
+            <method type="post" require-authentication="anonymous-all">
+                <service name="ContactmechService.create#ContactMechEntity"/>
+            </method>
+                <id name="contactmechId" >
+                    <method type="put">
+                        <entity name="ContactMechEntity" operation="update"/>
+                    </method>
+                    <method type="delete">
+                        <service name="ContactmechService.delete#ContactMechEntity"/>
+                    </method>
+                </id>
+            </resource>
+        </id>
+    </resource>
+
     <resource name="partypost" require-authentication="anonymous-all">
         <method type="post"><service name="PartyService.create#PartyEntity"/> </method>
     </resource>
