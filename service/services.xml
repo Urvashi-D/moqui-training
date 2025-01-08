@@ -84,14 +84,14 @@
                 trainingRecord = trainingRecord.one()
 
                 if (trainingRecord) {
-                    // Update existing record
+                    // Update
                     trainingRecord.set("trainingDate", context.trainingDate)
                     trainingRecord.set("trainingPrice", context.trainingPrice)
                     trainingRecord.set("trainingDuration", context.trainingDuration)
                     trainingRecord.update()
                     context.trainingId = trainingRecord.trainingId
                 } else {
-                    // Create a new record
+                    // Create
                     def newTrainingId = ec.entity.sequencedIdPrimary("moqui.training.MoquiTraining", null, null)
                     ec.entity.makeValue("moqui.training.MoquiTraining")
                         .set("trainingId", newTrainingId)
@@ -102,7 +102,6 @@
                         .create()
                     context.trainingId = newTrainingId
                 }
-
             </script>
         </actions>
     </service>

@@ -1,0 +1,6 @@
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+          name="contactmech" displayName="Contact-Mech REST API" version="2.0.0">
+    <resource name="conmechget" require-authentication="anonymous-all">
+        <method type="get"><entity name="ContactMechEntity" operation="list"/></method>
+    </resource>
+</resource>

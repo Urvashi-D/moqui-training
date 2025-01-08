@@ -1,0 +1,25 @@
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+name="party" displayName="Party REST API" version="2.0.0">
+
+    <resource name="partyget" require-authentication="anonymous-all">
+        <method type="get"><entity name="PartyEntity" operation="list"/> </method>
+        <id name="partyId">
+            <method type="get" require-authentication="anonymous-all">
+                <entity name="PartyEntity" operation="one"/></method>
+
+            <method type="put" require-authentication="anonymous-all">
+                <entity name="PartyEntity" operation="update"/>
+            </method>
+
+            <method type="delete" require-authentication="anonymous-all">
+                <service name="PartyService.delete#PartyEntity" />
+            </method>
+        </id>
+      </resource>
+
+    <resource name="partypost" require-authentication="anonymous-all">
+        <method type="post"><service name="PartyService.create#PartyEntity"/> </method>
+    </resource>
+
+
+</resource>

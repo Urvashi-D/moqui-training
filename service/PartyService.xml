@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+        <service verb="create" noun="PartyEntity" type="entity-auto" >
+            <in-parameters>
+                <auto-parameters entity-name="PartyEntity" include="nonpk"/>
+                <parameter name ="partyId" required="true"/>
+            </in-parameters>
+            <out-parameters>
+                <auto-parameters include="pk" required="true"/>
+            </out-parameters>
+        </service>
+
+<!--    <service verb="store" noun="PartyEntity" displayName="Update Party Entity" type="entity-auto">-->
+<!--        <in-parameters>-->
+<!--            <auto-parameters entity-name="PartyEntity" include="nonpk"/>-->
+<!--            <parameter name="partyId" required="true"/>-->
+<!--        </in-parameters>-->
+<!--        <out-parameters>-->
+<!--            <parameter name="partyId" required="true"/>-->
+<!--        </out-parameters>-->
+<!--    </service>-->
+    <service verb="delete" noun="PartyEntity" displayName="Delete Party Id" type="entity-auto">
+        <in-parameters>
+            <parameter name="partyId" required="true"/>
+        </in-parameters>
+    </service>
+</services>
