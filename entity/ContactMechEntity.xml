@@ -4,7 +4,7 @@
 
     <entity entity-name="ContactMechEntity" package="moqui.contactmech">
         <field name="contactmechId" type="id" is-pk="true" />
-        <field name="partyId" type="text-medium" not-null="true" />
+        <field name="partyId" type="id" not-null="true" />
         <field name="streetAddress" type="text-medium" not-null="true"/>
         <field name="city" type="text-medium"/>
         <field name="state" type="text-medium"/>

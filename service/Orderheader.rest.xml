@@ -1,0 +1,27 @@
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+          name="order" displayName="ORDER HEADER REST API" version="2.0.0">
+    <resource name="orders" require-authentication="anonymous-all">
+        <method type="get">
+            <entity name="OrderHeaderEntity" operation="list"/>
+        </method>
+        <method type="post">
+            <service name="OrderHeaderService.create#OrderHeaderEntity"/>
+        </method>
+        <id name="orderId">
+            <method type="get">
+                <entity name="OrderHeaderEntity" operation="one"/>
+            </method>
+            <method type="put">
+                <entity name="OrderHeaderEntity" operation="update"/>
+            </method>
+            <method type="delete">
+                <entity name="OrderHeaderEntity" operation="delete"/>
+            </method>
+            <resource name="items" >
+                <method type="post">
+                    <service name="OrderItemService.create#OrderItemEntity"/>
+                </method>
+            </resource>
+        </id>
+        </resource>
+</resource>

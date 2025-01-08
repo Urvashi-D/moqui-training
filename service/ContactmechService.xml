@@ -10,8 +10,10 @@
             <auto-parameters include="pk" required="true"/>
         </out-parameters>
     </service>
+
     <service verb="delete" noun="ContactMechEntity" type="entity-auto">
         <in-parameters>
+            <parameter name="partyId" required="true"/>
             <parameter name="contactmechId" required="true"/>
         </in-parameters>
     </service>

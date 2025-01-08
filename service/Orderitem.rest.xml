@@ -1,0 +1,11 @@
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+          name="orderi" displayName="ORDER ITEM REST API" version="2.0.0">
+    <resource name="orderis" require-authentication="anonymous-all">
+        <method type="get">
+            <entity name="OrderItemEntity" operation="list"/>
+        </method>
+        <method type="post">
+            <service name="OrderItemService.create#OrderItemEntity"/>
+        </method>
+    </resource>
+</resource>
