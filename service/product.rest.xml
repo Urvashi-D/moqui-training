@@ -1,0 +1,24 @@
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+ name="product" displayName="Product REST API's" version="2.0.0">
+    <resource name="products" require-authentication="anonymous-all">
+        <method type="get">
+            <entity name="ProductEntity" operation="list"/>
+        </method>
+        <method type="post">
+            <service name="ProductService.create#ProductEntity"/>
+        </method>
+    </resource>
+    <resource name="productsud" require-authentication="anonymous-all">
+        <id name="productId">
+            <method type="get">
+                <entity name="ProductEntity" operation="one"/>
+            </method>
+            <method type="put">
+                <entity name="ProductEntity" operation="update"/>
+            </method>
+            <method type="delete">
+                <service name="ProductService.delete#ProductEntity"/>
+            </method>
+        </id>
+    </resource>
+</resource>

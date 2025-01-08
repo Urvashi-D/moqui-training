@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+<service verb="create" noun="ProductEntity" displayName="Create Product" type="entity-auto">
+    <in-parameters>
+        <auto-parameters entity-name="ProductEntity" include="nonpk"/>
+        <parameter name="productId" required="true"/>
+    </in-parameters>
+    <out-parameters>
+        <parameter name="pk" required="true"/>
+    </out-parameters>
+</service>
+
+    <service verb="delete" noun="ProductEntity" displayName="Delete Product" type="entity-auto">
+        <in-parameters>
+            <auto-parameters entity-name="ProductEntity" include="nonpk"/>
+            <parameter name="productId" required="true"/>
+        </in-parameters>
+        <out-parameters>
+            <parameter name="pk" required="true"/>
+        </out-parameters>
+    </service>
+</services>
