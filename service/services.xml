@@ -74,7 +74,6 @@
         <actions>
             <script>
 
-                // Fetch existing record by trainingID or trainingName
                 def trainingRecord = ec.entity.find("moqui.training.MoquiTraining")
                 if (context.trainingId) {
                     trainingRecord.condition("trainingId", context.trainingId)

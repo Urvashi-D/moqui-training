@@ -7,7 +7,7 @@
             <parameter name ="orderId" required="true"/>
         </in-parameters>
         <out-parameters>
-            <auto-parameters include="pk" required="true"/>
+            <auto-parameters include="pk" />
         </out-parameters>
     </service>
 </services>
